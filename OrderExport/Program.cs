@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
-using DevExpress.UserSkins;
-using DevExpress.Skins;
-using DevExpress.LookAndFeel;
+using System.Threading;
 
 namespace OrderExport
 {
@@ -16,6 +12,8 @@ namespace OrderExport
         [STAThread]
         static void Main()
         {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-Hans");
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
