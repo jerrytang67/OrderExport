@@ -22,6 +22,7 @@ namespace OrderExport
         public string 运单号 { get; set; }
         public string SKU编码 { get; set; }
         public string 条形码 { get; set; }
+        public string 图片 { get; set; }
 
         public bool Equals(DataDto other)
         {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -111,6 +112,7 @@ namespace OrderExport
                                     }
                                 }
 
+                                model.图片 = model.商品款号 + ".jpg";
                                 xmlResult.Add(model);
                             }
                         }
@@ -176,11 +178,11 @@ namespace OrderExport
         {
             if (e.Column.FieldName == "photo" && e.IsGetData)
             {
-                var row = e.ListSourceRowIndex;
+                var row = e.Row as DataDto;
 
                 // row["col商品款号"];
                 //RefImage是存储图片路径的那一列
-                string filePath = "1.png";//row["col商品款号"] + "1.png";
+                string filePath = row.图片;//row["col商品款号"] + "1.png";
                 Image img = null;
                 try
                 {
@@ -317,6 +319,29 @@ namespace OrderExport
 
             gridView.Columns["订单号"].FilterInfo = new ColumnFilterInfo(sb.ToString());
 
+        }
+
+        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            using (var fbd = new FolderBrowserDialog())
+            {
+                var result = fbd.ShowDialog();
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    this.picPath.EditValue = fbd.SelectedPath;
+
+                    var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                    AppSettingsSection app = config.AppSettings;
+                    app.Settings.Add("picPath", fbd.SelectedPath);
+                    config.Save(ConfigurationSaveMode.Modified);
+
+
+
+                    // Properties.Settings.Default.picPath = fbd.SelectedPath;
+                    // Properties.Settings.Default.Save();
+                }
+            }
         }
     }
 }
