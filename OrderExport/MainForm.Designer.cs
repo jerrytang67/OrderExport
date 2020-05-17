@@ -86,7 +86,6 @@ namespace OrderExport
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.barEditItem2 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit10 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.picPath = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit11 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
@@ -110,6 +109,8 @@ namespace OrderExport
             this.barEditItem4 = new DevExpress.XtraBars.BarEditItem();
             this.barEditItem5 = new DevExpress.XtraBars.BarEditItem();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.barEditItem2 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
@@ -127,6 +128,7 @@ namespace OrderExport
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl
@@ -413,11 +415,11 @@ namespace OrderExport
             this.barButtonItem3,
             this.barButtonItem4,
             this.barButtonItem5,
-            this.barEditItem2,
             this.picPath,
-            this.barButtonItem6});
+            this.barButtonItem6,
+            this.barEditItem2});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 21;
+            this.ribbonControl.MaxItemId = 22;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage,
@@ -434,7 +436,8 @@ namespace OrderExport
             this.repositoryItemTextEdit9,
             this.repositoryItemRichTextEdit1,
             this.repositoryItemTextEdit10,
-            this.repositoryItemTextEdit11});
+            this.repositoryItemTextEdit11,
+            this.repositoryItemMemoEdit1});
             this.ribbonControl.Size = new System.Drawing.Size(1366, 161);
             // 
             // skinRibbonGalleryBarItem
@@ -476,6 +479,7 @@ namespace OrderExport
             this.barButtonItem2.Id = 4;
             this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
             this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
             // barButtonItem3
             // 
@@ -503,18 +507,8 @@ namespace OrderExport
             this.barButtonItem5.Name = "barButtonItem5";
             this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
             // 
-            // barEditItem2
-            // 
-            this.barEditItem2.Caption = "快递号:";
-            this.barEditItem2.Edit = this.repositoryItemTextEdit10;
-            this.barEditItem2.EditHeight = 80;
-            this.barEditItem2.EditWidth = 200;
-            this.barEditItem2.Id = 18;
-            this.barEditItem2.Name = "barEditItem2";
-            // 
             // repositoryItemTextEdit10
             // 
-            this.repositoryItemTextEdit10.AutoHeight = false;
             this.repositoryItemTextEdit10.Name = "repositoryItemTextEdit10";
             // 
             // picPath
@@ -522,7 +516,6 @@ namespace OrderExport
             this.picPath.Caption = "图片存放目录";
             this.picPath.Edit = this.repositoryItemTextEdit11;
             this.picPath.EditWidth = 300;
-            this.picPath.Enabled = false;
             this.picPath.Id = 19;
             this.picPath.Name = "picPath";
             // 
@@ -530,6 +523,7 @@ namespace OrderExport
             // 
             this.repositoryItemTextEdit11.AutoHeight = false;
             this.repositoryItemTextEdit11.Name = "repositoryItemTextEdit11";
+            this.repositoryItemTextEdit11.ReadOnly = true;
             // 
             // barButtonItem6
             // 
@@ -584,7 +578,7 @@ namespace OrderExport
             this.ribbonPageGroup4.ItemLinks.Add(this.picPath);
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem6);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "图片源配置";
             // 
             // repositoryItemTextEdit1
             // 
@@ -650,6 +644,19 @@ namespace OrderExport
             this.barEditItem5.Id = 9;
             this.barEditItem5.Name = "barEditItem5";
             // 
+            // barEditItem2
+            // 
+            this.barEditItem2.Caption = "快递号:";
+            this.barEditItem2.Edit = this.repositoryItemMemoEdit1;
+            this.barEditItem2.EditHeight = 80;
+            this.barEditItem2.EditWidth = 250;
+            this.barEditItem2.Id = 21;
+            this.barEditItem2.Name = "barEditItem2";
+            // 
+            // repositoryItemMemoEdit1
+            // 
+            this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -678,6 +685,7 @@ namespace OrderExport
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -737,11 +745,12 @@ namespace OrderExport
         private DevExpress.XtraGrid.Columns.GridColumn colPic;
         private RepositoryItemPictureEdit repositoryItemPictureEdit1;
         private RepositoryItemRichTextEdit repositoryItemRichTextEdit1;
-        private DevExpress.XtraBars.BarEditItem barEditItem2;
         private RepositoryItemTextEdit repositoryItemTextEdit10;
         private DevExpress.XtraBars.BarEditItem picPath;
         private RepositoryItemTextEdit repositoryItemTextEdit11;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.BarEditItem barEditItem2;
+        private RepositoryItemMemoEdit repositoryItemMemoEdit1;
     }
 }
