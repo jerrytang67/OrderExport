@@ -1,21 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading;
 using System.Windows.Forms;
-using DevExpress.Data;
-using DevExpress.DataAccess.Native.Excel;
 using DevExpress.XtraBars.Ribbon;
-using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Columns;
-using Newtonsoft.Json;
+using DevExpress.XtraRichEdit.SpellChecker;
+using OfficeOpenXml;
 
 namespace OrderExport
 {
@@ -31,8 +27,8 @@ namespace OrderExport
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var fileContent = string.Empty;
-            var filePath = string.Empty;
+            var oldData = this.gridControl.DataSource as List<DataDto> ?? new List<DataDto>();
+
 
             using (var openFileDialog = new OpenFileDialog())
             {
@@ -42,10 +38,105 @@ namespace OrderExport
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    filePath = openFileDialog.FileName;
+                    var xmlResult = new List<DataDto>();
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        openFileDialog.OpenFile().CopyTo(memoryStream);
+                        using (var package = new ExcelPackage(memoryStream))
+                        {
+                            var worksheet = package.Workbook.Worksheets[1]; // Tip: To access the first worksheet, try index 1, not 0
+                            int rowCount = worksheet.Dimension.Rows;
+                            int ColCount = worksheet.Dimension.Columns;
+                            for (int row = 2; row <= rowCount; row++)
+                            {
+                                var model = new DataDto();
+                                for (int col = 1; col <= ColCount; col++)
+                                {
+                                    switch (col)
+                                    {
+                                        case 1:
+                                            model.来源 = worksheet.Cells[row, col].Value?.ToString();
+                                            break;
+                                        case 2:
+                                            model.订单号 = worksheet.Cells[row, col].Value?.ToString();
+                                            break;
+                                        case 3:
+                                            model.订单序号 = worksheet.Cells[row, col].Value?.ToString();
+                                            break;
+                                        case 4:
+                                            model.品牌名 = worksheet.Cells[row, col].Value?.ToString();
+                                            break;
+                                        case 5:
+                                            model.商品条码 = worksheet.Cells[row, col].Value?.ToString();
+                                            break;
+                                        case 6:
+                                            model.商品款号 = worksheet.Cells[row, col].Value?.ToString();
+                                            break;
+                                        case 7:
+                                            model.品类 = worksheet.Cells[row, col].Value?.ToString();
+                                            break;
+                                        case 8:
+                                            model.商品名称 = worksheet.Cells[row, col].Value?.ToString();
+                                            break;
+                                        case 9:
+                                            model.颜色 = worksheet.Cells[row, col].Value?.ToString();
+                                            break;
+                                        case 10:
+                                            model.尺码 = worksheet.Cells[row, col].Value?.ToString();
+                                            break;
+                                        case 11:
+                                            model.数量 = worksheet.Cells[row, col].Value?.ToString();
+                                            break;
+                                        case 12:
+                                            model.收货人 = worksheet.Cells[row, col].Value?.ToString();
+                                            break;
+                                        case 13:
+                                            model.联系电话 = worksheet.Cells[row, col].Value?.ToString();
+                                            break;
+                                        case 14:
+                                            model.收货地址 = worksheet.Cells[row, col].Value?.ToString();
+                                            break;
+                                        case 15:
+                                            model.快递公司 = worksheet.Cells[row, col].Value?.ToString();
+                                            break;
+                                        case 16:
+                                            model.运单号 = worksheet.Cells[row, col].Value?.ToString();
+                                            break;
+                                        case 17:
+                                            model.SKU编码 = worksheet.Cells[row, col].Value?.ToString();
+                                            break;
+                                        case 18:
+                                            model.条形码 = worksheet.Cells[row, col].Value?.ToString();
+                                            break;
+                                    }
+                                }
 
-                    excelDataSource1.FileName = openFileDialog.FileName;
-                    excelDataSource1.Fill();
+                                xmlResult.Add(model);
+                            }
+                        }
+                    }
+
+                    var concat = false;
+
+                    if (oldData.Count > 0)
+                    {
+                        concat = DevExpress.XtraEditors.XtraMessageBox.Show(
+                            "是否在现有数据中追加？",
+                            "提示",
+                            MessageBoxButtons.OKCancel,
+                            MessageBoxIcon.Question) == DialogResult.OK;
+                    }
+
+                    if (concat)
+                    {
+
+
+                        gridControl.DataSource = oldData.Concat(xmlResult).ToList();
+                    }
+                    else
+                    {
+                        gridControl.DataSource = xmlResult;
+                    }
 
                 }
             }
@@ -56,8 +147,9 @@ namespace OrderExport
 
             if (ConfirmDelete() == DialogResult.OK)
             {
-                excelDataSource1.FileName = "";
-                excelDataSource1.Fill(new List<IParameter>());
+                // excelDataSource1.FileName = "";
+                // excelDataSource1.Fill(new List<IParameter>());
+                this.gridControl.DataSource = null;
             }
         }
 
@@ -192,6 +284,39 @@ namespace OrderExport
             {
                 return false;
             }
+        }
+
+        private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string path = "output.xlsx";
+            this.gridControl.ExportToXlsx(path);
+            // Open the created XLSX file with the default application.
+            Process.Start(path);
+        }
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.barEditItem2.EditValue = null;
+            gridView.Columns["订单号"].ClearFilter();
+        }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var lines = barEditItem2.EditValue.ToString().Split(new[] { Environment.NewLine }
+                    , StringSplitOptions.RemoveEmptyEntries);
+
+            if (lines.Length <= 0) return;
+
+            var sb = new StringBuilder();
+            sb.Append("[订单号] In (");
+            foreach (var line in lines)
+            {
+                sb.Append($"'{line}'");
+            }
+            sb.Append(")");
+
+            gridView.Columns["订单号"].FilterInfo = new ColumnFilterInfo(sb.ToString());
+
         }
     }
 }
