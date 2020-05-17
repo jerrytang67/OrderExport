@@ -33,26 +33,26 @@ namespace OrderExport
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo1 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo2 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo3 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo4 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo5 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo6 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo7 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo8 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo9 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo10 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo11 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo12 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo13 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo14 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo15 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo16 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo17 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo18 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.ExcelWorksheetSettings excelWorksheetSettings1 = new DevExpress.DataAccess.Excel.ExcelWorksheetSettings();
-            DevExpress.DataAccess.Excel.ExcelSourceOptions excelSourceOptions1 = new DevExpress.DataAccess.Excel.ExcelSourceOptions(excelWorksheetSettings1);
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo55 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo56 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo57 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo58 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo59 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo60 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo61 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo62 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo63 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo64 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo65 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo66 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo67 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo68 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo69 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo70 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo71 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo72 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.ExcelWorksheetSettings excelWorksheetSettings4 = new DevExpress.DataAccess.Excel.ExcelWorksheetSettings();
+            DevExpress.DataAccess.Excel.ExcelSourceOptions excelSourceOptions4 = new DevExpress.DataAccess.Excel.ExcelSourceOptions(excelWorksheetSettings4);
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.excelDataSource1 = new DevExpress.DataAccess.Excel.ExcelDataSource();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -86,10 +86,11 @@ namespace OrderExport
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.repositoryItemTextEdit10 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.picPath = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit11 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.barEditItem2 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -106,17 +107,16 @@ namespace OrderExport
             this.repositoryItemTextEdit8 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemTextEdit9 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemRichTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit();
+            this.repositoryItemTextEdit10 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.barEditItem4 = new DevExpress.XtraBars.BarEditItem();
             this.barEditItem5 = new DevExpress.XtraBars.BarEditItem();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.barEditItem2 = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).BeginInit();
@@ -127,8 +127,8 @@ namespace OrderExport
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl
@@ -149,65 +149,65 @@ namespace OrderExport
             // 
             this.excelDataSource1.Name = "excelDataSource1";
             this.excelDataSource1.ResultSchemaSerializable = resources.GetString("excelDataSource1.ResultSchemaSerializable");
-            fieldInfo1.Name = "来源";
-            fieldInfo1.Type = typeof(string);
-            fieldInfo2.Name = "订单号";
-            fieldInfo2.Type = typeof(string);
-            fieldInfo3.Name = "订单序号";
-            fieldInfo3.Type = typeof(string);
-            fieldInfo4.Name = "品牌名";
-            fieldInfo4.Type = typeof(string);
-            fieldInfo5.Name = "商品条码";
-            fieldInfo5.Type = typeof(string);
-            fieldInfo6.Name = "商品款号";
-            fieldInfo6.Type = typeof(string);
-            fieldInfo7.Name = "品类";
-            fieldInfo7.Type = typeof(string);
-            fieldInfo8.Name = "商品名称";
-            fieldInfo8.Type = typeof(string);
-            fieldInfo9.Name = "颜色";
-            fieldInfo9.Type = typeof(string);
-            fieldInfo10.Name = "尺码";
-            fieldInfo10.Type = typeof(string);
-            fieldInfo11.Name = "数量";
-            fieldInfo11.Type = typeof(double);
-            fieldInfo12.Name = "收货人";
-            fieldInfo12.Type = typeof(string);
-            fieldInfo13.Name = "联系电话";
-            fieldInfo13.Type = typeof(double);
-            fieldInfo14.Name = "收货地址";
-            fieldInfo14.Type = typeof(string);
-            fieldInfo15.Name = "快递公司";
-            fieldInfo15.Type = typeof(string);
-            fieldInfo16.Name = "运单号";
-            fieldInfo16.Type = typeof(string);
-            fieldInfo17.Name = "SKU编码";
-            fieldInfo17.Type = typeof(string);
-            fieldInfo18.Name = "条形码";
-            fieldInfo18.Type = typeof(double);
+            fieldInfo55.Name = "来源";
+            fieldInfo55.Type = typeof(string);
+            fieldInfo56.Name = "订单号";
+            fieldInfo56.Type = typeof(string);
+            fieldInfo57.Name = "订单序号";
+            fieldInfo57.Type = typeof(string);
+            fieldInfo58.Name = "品牌名";
+            fieldInfo58.Type = typeof(string);
+            fieldInfo59.Name = "商品条码";
+            fieldInfo59.Type = typeof(string);
+            fieldInfo60.Name = "商品款号";
+            fieldInfo60.Type = typeof(string);
+            fieldInfo61.Name = "品类";
+            fieldInfo61.Type = typeof(string);
+            fieldInfo62.Name = "商品名称";
+            fieldInfo62.Type = typeof(string);
+            fieldInfo63.Name = "颜色";
+            fieldInfo63.Type = typeof(string);
+            fieldInfo64.Name = "尺码";
+            fieldInfo64.Type = typeof(string);
+            fieldInfo65.Name = "数量";
+            fieldInfo65.Type = typeof(double);
+            fieldInfo66.Name = "收货人";
+            fieldInfo66.Type = typeof(string);
+            fieldInfo67.Name = "联系电话";
+            fieldInfo67.Type = typeof(double);
+            fieldInfo68.Name = "收货地址";
+            fieldInfo68.Type = typeof(string);
+            fieldInfo69.Name = "快递公司";
+            fieldInfo69.Type = typeof(string);
+            fieldInfo70.Name = "运单号";
+            fieldInfo70.Type = typeof(string);
+            fieldInfo71.Name = "SKU编码";
+            fieldInfo71.Type = typeof(string);
+            fieldInfo72.Name = "条形码";
+            fieldInfo72.Type = typeof(double);
             this.excelDataSource1.Schema.AddRange(new DevExpress.DataAccess.Excel.FieldInfo[] {
-            fieldInfo1,
-            fieldInfo2,
-            fieldInfo3,
-            fieldInfo4,
-            fieldInfo5,
-            fieldInfo6,
-            fieldInfo7,
-            fieldInfo8,
-            fieldInfo9,
-            fieldInfo10,
-            fieldInfo11,
-            fieldInfo12,
-            fieldInfo13,
-            fieldInfo14,
-            fieldInfo15,
-            fieldInfo16,
-            fieldInfo17,
-            fieldInfo18});
-            excelWorksheetSettings1.CellRange = null;
-            excelWorksheetSettings1.WorksheetName = "Sheet1";
-            excelSourceOptions1.ImportSettings = excelWorksheetSettings1;
-            this.excelDataSource1.SourceOptions = excelSourceOptions1;
+            fieldInfo55,
+            fieldInfo56,
+            fieldInfo57,
+            fieldInfo58,
+            fieldInfo59,
+            fieldInfo60,
+            fieldInfo61,
+            fieldInfo62,
+            fieldInfo63,
+            fieldInfo64,
+            fieldInfo65,
+            fieldInfo66,
+            fieldInfo67,
+            fieldInfo68,
+            fieldInfo69,
+            fieldInfo70,
+            fieldInfo71,
+            fieldInfo72});
+            excelWorksheetSettings4.CellRange = null;
+            excelWorksheetSettings4.WorksheetName = "Sheet1";
+            excelSourceOptions4.ImportSettings = excelWorksheetSettings4;
+            this.excelDataSource1.SourceOptions = excelSourceOptions4;
             // 
             // gridView
             // 
@@ -245,24 +245,24 @@ namespace OrderExport
             this.col来源.Name = "col来源";
             this.col来源.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.col来源.Visible = true;
-            this.col来源.VisibleIndex = 0;
-            this.col来源.Width = 33;
+            this.col来源.VisibleIndex = 10;
+            this.col来源.Width = 71;
             // 
             // col订单号
             // 
             this.col订单号.FieldName = "订单号";
             this.col订单号.Name = "col订单号";
             this.col订单号.Visible = true;
-            this.col订单号.VisibleIndex = 1;
-            this.col订单号.Width = 33;
+            this.col订单号.VisibleIndex = 11;
+            this.col订单号.Width = 71;
             // 
             // col订单序号
             // 
             this.col订单序号.FieldName = "订单序号";
             this.col订单序号.Name = "col订单序号";
             this.col订单序号.Visible = true;
-            this.col订单序号.VisibleIndex = 2;
-            this.col订单序号.Width = 33;
+            this.col订单序号.VisibleIndex = 12;
+            this.col订单序号.Width = 71;
             // 
             // col品牌名
             // 
@@ -270,7 +270,7 @@ namespace OrderExport
             this.col品牌名.Name = "col品牌名";
             this.col品牌名.Visible = true;
             this.col品牌名.VisibleIndex = 3;
-            this.col品牌名.Width = 33;
+            this.col品牌名.Width = 71;
             // 
             // col商品条码
             // 
@@ -278,7 +278,7 @@ namespace OrderExport
             this.col商品条码.Name = "col商品条码";
             this.col商品条码.Visible = true;
             this.col商品条码.VisibleIndex = 4;
-            this.col商品条码.Width = 33;
+            this.col商品条码.Width = 71;
             // 
             // col商品款号
             // 
@@ -286,7 +286,7 @@ namespace OrderExport
             this.col商品款号.Name = "col商品款号";
             this.col商品款号.Visible = true;
             this.col商品款号.VisibleIndex = 5;
-            this.col商品款号.Width = 33;
+            this.col商品款号.Width = 71;
             // 
             // col品类
             // 
@@ -294,95 +294,95 @@ namespace OrderExport
             this.col品类.Name = "col品类";
             this.col品类.Visible = true;
             this.col品类.VisibleIndex = 6;
-            this.col品类.Width = 33;
+            this.col品类.Width = 71;
             // 
             // col商品名称
             // 
             this.col商品名称.FieldName = "商品名称";
             this.col商品名称.Name = "col商品名称";
             this.col商品名称.Visible = true;
-            this.col商品名称.VisibleIndex = 7;
-            this.col商品名称.Width = 122;
+            this.col商品名称.VisibleIndex = 13;
+            this.col商品名称.Width = 69;
             // 
             // col颜色
             // 
             this.col颜色.FieldName = "颜色";
             this.col颜色.Name = "col颜色";
             this.col颜色.Visible = true;
-            this.col颜色.VisibleIndex = 8;
-            this.col颜色.Width = 24;
+            this.col颜色.VisibleIndex = 7;
+            this.col颜色.Width = 51;
             // 
             // col尺码
             // 
             this.col尺码.FieldName = "尺码";
             this.col尺码.Name = "col尺码";
             this.col尺码.Visible = true;
-            this.col尺码.VisibleIndex = 9;
-            this.col尺码.Width = 24;
+            this.col尺码.VisibleIndex = 8;
+            this.col尺码.Width = 51;
             // 
             // col数量
             // 
             this.col数量.FieldName = "数量";
             this.col数量.Name = "col数量";
             this.col数量.Visible = true;
-            this.col数量.VisibleIndex = 10;
-            this.col数量.Width = 24;
+            this.col数量.VisibleIndex = 2;
+            this.col数量.Width = 51;
             // 
             // col收货人
             // 
             this.col收货人.FieldName = "收货人";
             this.col收货人.Name = "col收货人";
             this.col收货人.Visible = true;
-            this.col收货人.VisibleIndex = 11;
-            this.col收货人.Width = 24;
+            this.col收货人.VisibleIndex = 14;
+            this.col收货人.Width = 89;
             // 
             // col联系电话
             // 
             this.col联系电话.FieldName = "联系电话";
             this.col联系电话.Name = "col联系电话";
             this.col联系电话.Visible = true;
-            this.col联系电话.VisibleIndex = 12;
-            this.col联系电话.Width = 24;
+            this.col联系电话.VisibleIndex = 15;
+            this.col联系电话.Width = 89;
             // 
             // col收货地址
             // 
             this.col收货地址.FieldName = "收货地址";
             this.col收货地址.Name = "col收货地址";
             this.col收货地址.Visible = true;
-            this.col收货地址.VisibleIndex = 13;
-            this.col收货地址.Width = 24;
+            this.col收货地址.VisibleIndex = 16;
+            this.col收货地址.Width = 89;
             // 
             // col快递公司
             // 
             this.col快递公司.FieldName = "快递公司";
             this.col快递公司.Name = "col快递公司";
             this.col快递公司.Visible = true;
-            this.col快递公司.VisibleIndex = 14;
-            this.col快递公司.Width = 24;
+            this.col快递公司.VisibleIndex = 17;
+            this.col快递公司.Width = 89;
             // 
             // col运单号
             // 
             this.col运单号.FieldName = "运单号";
             this.col运单号.Name = "col运单号";
             this.col运单号.Visible = true;
-            this.col运单号.VisibleIndex = 15;
-            this.col运单号.Width = 24;
+            this.col运单号.VisibleIndex = 9;
+            this.col运单号.Width = 57;
             // 
             // colSKU编码
             // 
             this.colSKU编码.FieldName = "SKU编码";
             this.colSKU编码.Name = "colSKU编码";
             this.colSKU编码.Visible = true;
-            this.colSKU编码.VisibleIndex = 16;
-            this.colSKU编码.Width = 24;
+            this.colSKU编码.VisibleIndex = 1;
+            this.colSKU编码.Width = 67;
             // 
             // col条形码
             // 
             this.col条形码.FieldName = "条形码";
             this.col条形码.Name = "col条形码";
             this.col条形码.Visible = true;
-            this.col条形码.VisibleIndex = 17;
-            this.col条形码.Width = 24;
+            this.col条形码.VisibleIndex = 18;
+            this.col条形码.Width = 103;
             // 
             // colPic
             // 
@@ -390,13 +390,13 @@ namespace OrderExport
             this.colPic.ColumnEdit = this.repositoryItemPictureEdit1;
             this.colPic.FieldName = "photo";
             this.colPic.Name = "colPic";
-            this.colPic.UnboundType = DevExpress.Data.UnboundColumnType.Object;
+            this.colPic.UnboundType = DevExpress.Data.UnboundColumnType.String;
             this.colPic.Visible = true;
-            this.colPic.VisibleIndex = 18;
-            this.colPic.Width = 30;
+            this.colPic.VisibleIndex = 0;
             // 
             // repositoryItemPictureEdit1
             // 
+            this.repositoryItemPictureEdit1.ExportMode = DevExpress.XtraEditors.Repository.ExportMode.Value;
             this.repositoryItemPictureEdit1.Name = "repositoryItemPictureEdit1";
             this.repositoryItemPictureEdit1.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             // 
@@ -507,10 +507,6 @@ namespace OrderExport
             this.barButtonItem5.Name = "barButtonItem5";
             this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
             // 
-            // repositoryItemTextEdit10
-            // 
-            this.repositoryItemTextEdit10.Name = "repositoryItemTextEdit10";
-            // 
             // picPath
             // 
             this.picPath.Caption = "图片存放目录";
@@ -533,6 +529,19 @@ namespace OrderExport
             this.barButtonItem6.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.LargeImage")));
             this.barButtonItem6.Name = "barButtonItem6";
             this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
+            // 
+            // barEditItem2
+            // 
+            this.barEditItem2.Caption = "快递号:";
+            this.barEditItem2.Edit = this.repositoryItemMemoEdit1;
+            this.barEditItem2.EditHeight = 80;
+            this.barEditItem2.EditWidth = 250;
+            this.barEditItem2.Id = 21;
+            this.barEditItem2.Name = "barEditItem2";
+            // 
+            // repositoryItemMemoEdit1
+            // 
+            this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
             // 
             // ribbonPage
             // 
@@ -630,6 +639,10 @@ namespace OrderExport
             this.repositoryItemRichTextEdit1.Name = "repositoryItemRichTextEdit1";
             this.repositoryItemRichTextEdit1.ShowCaretInReadOnly = false;
             // 
+            // repositoryItemTextEdit10
+            // 
+            this.repositoryItemTextEdit10.Name = "repositoryItemTextEdit10";
+            // 
             // barEditItem4
             // 
             this.barEditItem4.Caption = "barEditItem3";
@@ -643,19 +656,6 @@ namespace OrderExport
             this.barEditItem5.Edit = this.repositoryItemTextEdit3;
             this.barEditItem5.Id = 9;
             this.barEditItem5.Name = "barEditItem5";
-            // 
-            // barEditItem2
-            // 
-            this.barEditItem2.Caption = "快递号:";
-            this.barEditItem2.Edit = this.repositoryItemMemoEdit1;
-            this.barEditItem2.EditHeight = 80;
-            this.barEditItem2.EditWidth = 250;
-            this.barEditItem2.Id = 21;
-            this.barEditItem2.Name = "barEditItem2";
-            // 
-            // repositoryItemMemoEdit1
-            // 
-            this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
             // 
             // MainForm
             // 
@@ -672,8 +672,8 @@ namespace OrderExport
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).EndInit();
@@ -684,8 +684,8 @@ namespace OrderExport
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

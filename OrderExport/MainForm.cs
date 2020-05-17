@@ -317,25 +317,29 @@ namespace OrderExport
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             this.barEditItem2.EditValue = null;
-            gridView.Columns["订单号"].ClearFilter();
+            gridView.Columns["运单号"].ClearFilter();
         }
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (barEditItem2.EditValue == null) return;
+
             var lines = barEditItem2.EditValue.ToString().Split(new[] { Environment.NewLine }
                     , StringSplitOptions.RemoveEmptyEntries);
 
             if (lines.Length <= 0) return;
 
             var sb = new StringBuilder();
-            sb.Append("[订单号] In (");
+            sb.Append("[运单号] In (");
             foreach (var line in lines)
             {
-                sb.Append($"'{line}'");
+                sb.Append($"'{line}',");
             }
+
+            sb.Remove(sb.Length - 1, 1);
             sb.Append(")");
 
-            gridView.Columns["订单号"].FilterInfo = new ColumnFilterInfo(sb.ToString());
+            gridView.Columns["运单号"].FilterInfo = new ColumnFilterInfo(sb.ToString());
 
         }
 
