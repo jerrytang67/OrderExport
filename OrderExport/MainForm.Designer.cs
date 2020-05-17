@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace OrderExport
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace OrderExport
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             DevExpress.DataAccess.Excel.FieldInfo fieldInfo1 = new DevExpress.DataAccess.Excel.FieldInfo();
             DevExpress.DataAccess.Excel.FieldInfo fieldInfo2 = new DevExpress.DataAccess.Excel.FieldInfo();
             DevExpress.DataAccess.Excel.FieldInfo fieldInfo3 = new DevExpress.DataAccess.Excel.FieldInfo();
@@ -75,7 +75,7 @@ namespace OrderExport
             this.colSKU编码 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col条形码 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPic = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.textEdit = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
+            this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.skinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.skinDropDownButtonItem = new DevExpress.XtraBars.SkinDropDownButtonItem();
@@ -109,13 +109,12 @@ namespace OrderExport
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
             this.barEditItem4 = new DevExpress.XtraBars.BarEditItem();
             this.barEditItem5 = new DevExpress.XtraBars.BarEditItem();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
@@ -133,12 +132,12 @@ namespace OrderExport
             // 
             this.gridControl.DataSource = this.excelDataSource1;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.Location = new System.Drawing.Point(0, 160);
+            this.gridControl.Location = new System.Drawing.Point(0, 161);
             this.gridControl.MainView = this.gridView;
             this.gridControl.Name = "gridControl";
             this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.textEdit});
-            this.gridControl.Size = new System.Drawing.Size(1366, 608);
+            this.repositoryItemPictureEdit1});
+            this.gridControl.Size = new System.Drawing.Size(1366, 607);
             this.gridControl.TabIndex = 0;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -234,11 +233,13 @@ namespace OrderExport
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
             this.gridView.OptionsSelection.MultiSelect = true;
+            this.gridView.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView_CustomUnboundColumnData);
             // 
             // col来源
             // 
             this.col来源.FieldName = "来源";
             this.col来源.Name = "col来源";
+            this.col来源.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.col来源.Visible = true;
             this.col来源.VisibleIndex = 0;
             this.col来源.Width = 33;
@@ -382,14 +383,18 @@ namespace OrderExport
             // colPic
             // 
             this.colPic.Caption = "图片";
+            this.colPic.ColumnEdit = this.repositoryItemPictureEdit1;
+            this.colPic.FieldName = "photo";
             this.colPic.Name = "colPic";
+            this.colPic.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.colPic.Visible = true;
             this.colPic.VisibleIndex = 18;
             this.colPic.Width = 30;
             // 
-            // textEdit
+            // repositoryItemPictureEdit1
             // 
-            this.textEdit.Name = "textEdit";
+            this.repositoryItemPictureEdit1.Name = "repositoryItemPictureEdit1";
+            this.repositoryItemPictureEdit1.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             // 
             // ribbonControl
             // 
@@ -431,7 +436,7 @@ namespace OrderExport
             this.repositoryItemTextEdit7,
             this.repositoryItemTextEdit8,
             this.repositoryItemTextEdit9});
-            this.ribbonControl.Size = new System.Drawing.Size(1366, 160);
+            this.ribbonControl.Size = new System.Drawing.Size(1366, 161);
             // 
             // skinRibbonGalleryBarItem
             // 
@@ -685,7 +690,7 @@ namespace OrderExport
             this.Text = "订单助手";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
@@ -705,7 +710,6 @@ namespace OrderExport
         #endregion
 
         private DevExpress.XtraGrid.GridControl gridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem;
@@ -714,26 +718,7 @@ namespace OrderExport
         private DevExpress.XtraBars.BarButtonItem btn_loadExcel;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.DataAccess.Excel.ExcelDataSource excelDataSource1;
-        private DevExpress.XtraGrid.Columns.GridColumn col来源;
-        private DevExpress.XtraGrid.Columns.GridColumn col订单号;
-        private DevExpress.XtraGrid.Columns.GridColumn col订单序号;
-        private DevExpress.XtraGrid.Columns.GridColumn col品牌名;
-        private DevExpress.XtraGrid.Columns.GridColumn col商品条码;
-        private DevExpress.XtraGrid.Columns.GridColumn col商品款号;
-        private DevExpress.XtraGrid.Columns.GridColumn col品类;
-        private DevExpress.XtraGrid.Columns.GridColumn col商品名称;
-        private DevExpress.XtraGrid.Columns.GridColumn col颜色;
-        private DevExpress.XtraGrid.Columns.GridColumn col尺码;
-        private DevExpress.XtraGrid.Columns.GridColumn col数量;
-        private DevExpress.XtraGrid.Columns.GridColumn col收货人;
-        private DevExpress.XtraGrid.Columns.GridColumn col联系电话;
-        private DevExpress.XtraGrid.Columns.GridColumn col收货地址;
-        private DevExpress.XtraGrid.Columns.GridColumn col快递公司;
-        private DevExpress.XtraGrid.Columns.GridColumn col运单号;
-        private DevExpress.XtraGrid.Columns.GridColumn colSKU编码;
-        private DevExpress.XtraGrid.Columns.GridColumn col条形码;
         private DevExpress.XtraGrid.Columns.GridColumn col图片;
-        private DevExpress.XtraEditors.XtraOpenFileDialog xtraOpenFileDialog1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
@@ -762,8 +747,27 @@ namespace OrderExport
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit8;
         private DevExpress.XtraBars.BarEditItem barEditItem11;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit9;
-        private DevExpress.XtraGrid.Columns.GridColumn colPic;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
-        private RepositoryItemImageComboBox textEdit;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView;
+        private DevExpress.XtraGrid.Columns.GridColumn col来源;
+        private DevExpress.XtraGrid.Columns.GridColumn col订单号;
+        private DevExpress.XtraGrid.Columns.GridColumn col订单序号;
+        private DevExpress.XtraGrid.Columns.GridColumn col品牌名;
+        private DevExpress.XtraGrid.Columns.GridColumn col商品条码;
+        private DevExpress.XtraGrid.Columns.GridColumn col商品款号;
+        private DevExpress.XtraGrid.Columns.GridColumn col品类;
+        private DevExpress.XtraGrid.Columns.GridColumn col商品名称;
+        private DevExpress.XtraGrid.Columns.GridColumn col颜色;
+        private DevExpress.XtraGrid.Columns.GridColumn col尺码;
+        private DevExpress.XtraGrid.Columns.GridColumn col数量;
+        private DevExpress.XtraGrid.Columns.GridColumn col收货人;
+        private DevExpress.XtraGrid.Columns.GridColumn col联系电话;
+        private DevExpress.XtraGrid.Columns.GridColumn col收货地址;
+        private DevExpress.XtraGrid.Columns.GridColumn col快递公司;
+        private DevExpress.XtraGrid.Columns.GridColumn col运单号;
+        private DevExpress.XtraGrid.Columns.GridColumn colSKU编码;
+        private DevExpress.XtraGrid.Columns.GridColumn col条形码;
+        private DevExpress.XtraGrid.Columns.GridColumn colPic;
+        private RepositoryItemPictureEdit repositoryItemPictureEdit1;
     }
 }
