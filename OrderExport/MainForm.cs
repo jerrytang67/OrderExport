@@ -382,15 +382,12 @@ namespace OrderExport
                 var result = fbd.ShowDialog();
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                 {
-
-
                     this.picPath.EditValue = fbd.SelectedPath;
 
                     config = ConfigurationManager.OpenExeConfiguration(Assembly.GetExecutingAssembly().Location);
                     config.AppSettings.Settings["picPath"].Value = fbd.SelectedPath;
                     config.Save();
                     ConfigurationManager.RefreshSection("appSettings");
-
 
                     // Properties.Settings.Default.picPath = fbd.SelectedPath;
                     // Properties.Settings.Default.Save();

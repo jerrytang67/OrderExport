@@ -51,6 +51,7 @@ namespace OrderExport
             DevExpress.DataAccess.Excel.FieldInfo fieldInfo16 = new DevExpress.DataAccess.Excel.FieldInfo();
             DevExpress.DataAccess.Excel.FieldInfo fieldInfo17 = new DevExpress.DataAccess.Excel.FieldInfo();
             DevExpress.DataAccess.Excel.FieldInfo fieldInfo18 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo19 = new DevExpress.DataAccess.Excel.FieldInfo();
             DevExpress.DataAccess.Excel.ExcelWorksheetSettings excelWorksheetSettings1 = new DevExpress.DataAccess.Excel.ExcelWorksheetSettings();
             DevExpress.DataAccess.Excel.ExcelSourceOptions excelSourceOptions1 = new DevExpress.DataAccess.Excel.ExcelSourceOptions(excelWorksheetSettings1);
             this.gridControl = new DevExpress.XtraGrid.GridControl();
@@ -194,6 +195,8 @@ namespace OrderExport
             fieldInfo17.Type = typeof(string);
             fieldInfo18.Name = "条形码";
             fieldInfo18.Type = typeof(double);
+            fieldInfo19.Name = "图片";
+            fieldInfo19.Type = typeof(string);
             this.excelDataSource1.Schema.AddRange(new DevExpress.DataAccess.Excel.FieldInfo[] {
             fieldInfo1,
             fieldInfo2,
@@ -212,7 +215,9 @@ namespace OrderExport
             fieldInfo15,
             fieldInfo16,
             fieldInfo17,
-            fieldInfo18});
+            fieldInfo18,
+            fieldInfo19
+            });
             excelWorksheetSettings1.CellRange = null;
             excelWorksheetSettings1.WorksheetName = "Sheet1";
             excelSourceOptions1.ImportSettings = excelWorksheetSettings1;
@@ -400,6 +405,7 @@ namespace OrderExport
             this.colPic.Caption = "图片";
             this.colPic.ColumnEdit = this.repositoryItemPictureEdit1;
             this.colPic.FieldName = "photo";
+            this.colPic.GroupFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.colPic.Name = "colPic";
             this.colPic.UnboundType = DevExpress.Data.UnboundColumnType.String;
             this.colPic.Visible = true;
