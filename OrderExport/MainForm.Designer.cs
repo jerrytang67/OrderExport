@@ -422,7 +422,7 @@ namespace OrderExport
             // 
             // barButtonItem2
             // 
-            this.barButtonItem2.Caption = "当前汇总结果";
+            this.barButtonItem2.Caption = "带图模式";
             this.barButtonItem2.Id = 4;
             this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
             this.barButtonItem2.Name = "barButtonItem2";

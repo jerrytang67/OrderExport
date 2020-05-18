@@ -336,20 +336,10 @@ namespace OrderExport
         {
             if (gridView.RowCount > 0)
             {
-                gridView.OptionsView.RowAutoHeight = true;
-
-                exportExt.ExportToExcel(DateTime.Now.ToString("导出订单-yyyyMMddhhmmss"), gridControl);
-                gridView.OptionsView.RowAutoHeight = false;
-
-                // string path = "output.xlsx";
-                //
-                // gridView.OptionsPrint.PrintSelectedRowsOnly = Convert.ToBoolean(chk_ExportSelectOnly.EditValue);
-                //
-                // var list = gridControl.DataSource as List<DataDto>;
-                //
-                // gridControl.ExportToXlsx(path);
-                // // Open the created XLSX file with the default application.
-                // Process.Start(path);
+                string path = "output.xlsx";
+                gridView.OptionsPrint.PrintSelectedRowsOnly = Convert.ToBoolean(chk_ExportSelectOnly.EditValue);
+                gridControl.ExportToXlsx(path);
+                Process.Start(path);
             }
 
         }
@@ -391,22 +381,24 @@ namespace OrderExport
                 var result = fbd.ShowDialog();
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                 {
-                    this.picPath.EditValue = fbd.SelectedPath;
-
+                    picPath.EditValue = fbd.SelectedPath;
                     config = ConfigurationManager.OpenExeConfiguration(Assembly.GetExecutingAssembly().Location);
                     config.AppSettings.Settings["picPath"].Value = fbd.SelectedPath;
                     config.Save();
                     ConfigurationManager.RefreshSection("appSettings");
-
-                    // Properties.Settings.Default.picPath = fbd.SelectedPath;
-                    // Properties.Settings.Default.Save();
                 }
             }
         }
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            MessageBox.Show("还未做");
+            if (gridView.RowCount > 0)
+            {
+                gridView.OptionsPrint.PrintSelectedRowsOnly = Convert.ToBoolean(chk_ExportSelectOnly.EditValue);
+                gridView.OptionsView.RowAutoHeight = true;
+                exportExt.ExportToExcel(DateTime.Now.ToString("导出订单-yyyyMMddhhmmss"), gridControl);
+                gridView.OptionsView.RowAutoHeight = false;
+            }
         }
 
 
@@ -417,7 +409,7 @@ namespace OrderExport
                 config.AppSettings.Settings["exportSelectOnly"].Value = chk_ExportSelectOnly.EditValue.ToString();
 
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 config.AppSettings.Settings.Add("exportSelectOnly", chk_ExportSelectOnly.EditValue.ToString());
             }
