@@ -10,10 +10,8 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using DevExpress.Utils.Extensions;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraGrid.Columns;
-using DevExpress.XtraRichEdit.SpellChecker;
 using OfficeOpenXml;
 
 namespace OrderExport
@@ -29,16 +27,46 @@ namespace OrderExport
             InitializeComponent();
             config = ConfigurationManager.OpenExeConfiguration(Assembly.GetExecutingAssembly().Location);
 
+            gridControl.UseEmbeddedNavigator = true;
+
             try
             {
-                picPath.EditValue = config?.AppSettings?.Settings["picPath"]?.Value ?? "";
+                picPath.EditValue = config.AppSettings.Settings["picPath"].Value ?? "";
+            }
+            catch (Exception)
+            {
+                picPath.EditValue = "";
+                config.AppSettings.Settings.Add("picPath", "");
+                config.Save();
+                ConfigurationManager.RefreshSection("appSettings");
+            }
+
+            // TODO:这里获取方法下次用就要重构出来
+            try
+            {
+                chk_ExportSelectOnly.EditValue = ToBoolean(config.AppSettings.Settings["exportSelectOnly"].Value);
+            }
+            catch (Exception)
+            {
+                chk_ExportSelectOnly.EditValue = false;
+            }
+        }
+
+        private bool ToBoolean(string str)
+        {
+            if (string.IsNullOrEmpty(str))
+                return false;
+            try
+            {
+                return Convert.ToBoolean(str);
+
             }
             catch (Exception e)
             {
-                picPath.EditValue = "";
-                MessageBox.Show(e.Message);
+                return false;
             }
         }
+
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -304,10 +332,13 @@ namespace OrderExport
 
         private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (this.gridView.RowCount > 0)
+            if (gridView.RowCount > 0)
             {
                 string path = "output.xlsx";
-                this.gridControl.ExportToXlsx(path);
+
+                gridView.OptionsPrint.PrintSelectedRowsOnly = Convert.ToBoolean(chk_ExportSelectOnly.EditValue);
+
+                gridControl.ExportToXlsx(path);
                 // Open the created XLSX file with the default application.
                 Process.Start(path);
             }
@@ -370,6 +401,23 @@ namespace OrderExport
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             MessageBox.Show("还未做");
+        }
+
+
+        private void chk_ExportSelectOnly_changed(object sender, EventArgs e)
+        {
+            try
+            {
+                config.AppSettings.Settings["exportSelectOnly"].Value = chk_ExportSelectOnly.EditValue.ToString();
+
+            }
+            catch (Exception exception)
+            {
+                config.AppSettings.Settings.Add("exportSelectOnly", chk_ExportSelectOnly.EditValue.ToString());
+            }
+            config.Save();
+            ConfigurationManager.RefreshSection("appSettings");
+
         }
     }
 }

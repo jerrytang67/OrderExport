@@ -33,26 +33,26 @@ namespace OrderExport
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo55 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo56 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo57 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo58 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo59 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo60 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo61 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo62 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo63 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo64 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo65 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo66 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo67 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo68 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo69 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo70 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo71 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo72 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.ExcelWorksheetSettings excelWorksheetSettings4 = new DevExpress.DataAccess.Excel.ExcelWorksheetSettings();
-            DevExpress.DataAccess.Excel.ExcelSourceOptions excelSourceOptions4 = new DevExpress.DataAccess.Excel.ExcelSourceOptions(excelWorksheetSettings4);
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo1 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo2 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo3 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo4 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo5 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo6 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo7 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo8 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo9 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo10 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo11 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo12 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo13 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo14 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo15 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo16 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo17 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo18 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.ExcelWorksheetSettings excelWorksheetSettings1 = new DevExpress.DataAccess.Excel.ExcelWorksheetSettings();
+            DevExpress.DataAccess.Excel.ExcelSourceOptions excelSourceOptions1 = new DevExpress.DataAccess.Excel.ExcelSourceOptions(excelWorksheetSettings1);
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.excelDataSource1 = new DevExpress.DataAccess.Excel.ExcelDataSource();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -91,6 +91,8 @@ namespace OrderExport
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barEditItem2 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemMemoEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+            this.chk_ExportSelectOnly = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -108,6 +110,9 @@ namespace OrderExport
             this.repositoryItemTextEdit9 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemRichTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit();
             this.repositoryItemTextEdit10 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.repositoryItemToggleSwitch1 = new DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch();
+            this.repositoryItemCheckedComboBoxEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit();
             this.barEditItem4 = new DevExpress.XtraBars.BarEditItem();
             this.barEditItem5 = new DevExpress.XtraBars.BarEditItem();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
@@ -117,6 +122,7 @@ namespace OrderExport
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).BeginInit();
@@ -128,6 +134,9 @@ namespace OrderExport
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemToggleSwitch1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckedComboBoxEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,65 +158,65 @@ namespace OrderExport
             // 
             this.excelDataSource1.Name = "excelDataSource1";
             this.excelDataSource1.ResultSchemaSerializable = resources.GetString("excelDataSource1.ResultSchemaSerializable");
-            fieldInfo55.Name = "来源";
-            fieldInfo55.Type = typeof(string);
-            fieldInfo56.Name = "订单号";
-            fieldInfo56.Type = typeof(string);
-            fieldInfo57.Name = "订单序号";
-            fieldInfo57.Type = typeof(string);
-            fieldInfo58.Name = "品牌名";
-            fieldInfo58.Type = typeof(string);
-            fieldInfo59.Name = "商品条码";
-            fieldInfo59.Type = typeof(string);
-            fieldInfo60.Name = "商品款号";
-            fieldInfo60.Type = typeof(string);
-            fieldInfo61.Name = "品类";
-            fieldInfo61.Type = typeof(string);
-            fieldInfo62.Name = "商品名称";
-            fieldInfo62.Type = typeof(string);
-            fieldInfo63.Name = "颜色";
-            fieldInfo63.Type = typeof(string);
-            fieldInfo64.Name = "尺码";
-            fieldInfo64.Type = typeof(string);
-            fieldInfo65.Name = "数量";
-            fieldInfo65.Type = typeof(double);
-            fieldInfo66.Name = "收货人";
-            fieldInfo66.Type = typeof(string);
-            fieldInfo67.Name = "联系电话";
-            fieldInfo67.Type = typeof(double);
-            fieldInfo68.Name = "收货地址";
-            fieldInfo68.Type = typeof(string);
-            fieldInfo69.Name = "快递公司";
-            fieldInfo69.Type = typeof(string);
-            fieldInfo70.Name = "运单号";
-            fieldInfo70.Type = typeof(string);
-            fieldInfo71.Name = "SKU编码";
-            fieldInfo71.Type = typeof(string);
-            fieldInfo72.Name = "条形码";
-            fieldInfo72.Type = typeof(double);
+            fieldInfo1.Name = "来源";
+            fieldInfo1.Type = typeof(string);
+            fieldInfo2.Name = "订单号";
+            fieldInfo2.Type = typeof(string);
+            fieldInfo3.Name = "订单序号";
+            fieldInfo3.Type = typeof(string);
+            fieldInfo4.Name = "品牌名";
+            fieldInfo4.Type = typeof(string);
+            fieldInfo5.Name = "商品条码";
+            fieldInfo5.Type = typeof(string);
+            fieldInfo6.Name = "商品款号";
+            fieldInfo6.Type = typeof(string);
+            fieldInfo7.Name = "品类";
+            fieldInfo7.Type = typeof(string);
+            fieldInfo8.Name = "商品名称";
+            fieldInfo8.Type = typeof(string);
+            fieldInfo9.Name = "颜色";
+            fieldInfo9.Type = typeof(string);
+            fieldInfo10.Name = "尺码";
+            fieldInfo10.Type = typeof(string);
+            fieldInfo11.Name = "数量";
+            fieldInfo11.Type = typeof(double);
+            fieldInfo12.Name = "收货人";
+            fieldInfo12.Type = typeof(string);
+            fieldInfo13.Name = "联系电话";
+            fieldInfo13.Type = typeof(double);
+            fieldInfo14.Name = "收货地址";
+            fieldInfo14.Type = typeof(string);
+            fieldInfo15.Name = "快递公司";
+            fieldInfo15.Type = typeof(string);
+            fieldInfo16.Name = "运单号";
+            fieldInfo16.Type = typeof(string);
+            fieldInfo17.Name = "SKU编码";
+            fieldInfo17.Type = typeof(string);
+            fieldInfo18.Name = "条形码";
+            fieldInfo18.Type = typeof(double);
             this.excelDataSource1.Schema.AddRange(new DevExpress.DataAccess.Excel.FieldInfo[] {
-            fieldInfo55,
-            fieldInfo56,
-            fieldInfo57,
-            fieldInfo58,
-            fieldInfo59,
-            fieldInfo60,
-            fieldInfo61,
-            fieldInfo62,
-            fieldInfo63,
-            fieldInfo64,
-            fieldInfo65,
-            fieldInfo66,
-            fieldInfo67,
-            fieldInfo68,
-            fieldInfo69,
-            fieldInfo70,
-            fieldInfo71,
-            fieldInfo72});
-            excelWorksheetSettings4.CellRange = null;
-            excelWorksheetSettings4.WorksheetName = "Sheet1";
-            excelSourceOptions4.ImportSettings = excelWorksheetSettings4;
-            this.excelDataSource1.SourceOptions = excelSourceOptions4;
+            fieldInfo1,
+            fieldInfo2,
+            fieldInfo3,
+            fieldInfo4,
+            fieldInfo5,
+            fieldInfo6,
+            fieldInfo7,
+            fieldInfo8,
+            fieldInfo9,
+            fieldInfo10,
+            fieldInfo11,
+            fieldInfo12,
+            fieldInfo13,
+            fieldInfo14,
+            fieldInfo15,
+            fieldInfo16,
+            fieldInfo17,
+            fieldInfo18});
+            excelWorksheetSettings1.CellRange = null;
+            excelWorksheetSettings1.WorksheetName = "Sheet1";
+            excelSourceOptions1.ImportSettings = excelWorksheetSettings1;
+            this.excelDataSource1.SourceOptions = excelSourceOptions1;
             // 
             // gridView
             // 
@@ -233,6 +242,8 @@ namespace OrderExport
             this.colPic});
             this.gridView.DetailHeight = 377;
             this.gridView.GridControl = this.gridControl;
+            this.gridView.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "数量", null, "总数量 = {0}")});
             this.gridView.Name = "gridView";
             this.gridView.OptionsPrint.PrintFilterInfo = true;
             this.gridView.OptionsSelection.MultiSelect = true;
@@ -417,9 +428,10 @@ namespace OrderExport
             this.barButtonItem5,
             this.picPath,
             this.barButtonItem6,
-            this.barEditItem2});
+            this.barEditItem2,
+            this.chk_ExportSelectOnly});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 22;
+            this.ribbonControl.MaxItemId = 29;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage,
@@ -437,7 +449,11 @@ namespace OrderExport
             this.repositoryItemRichTextEdit1,
             this.repositoryItemTextEdit10,
             this.repositoryItemTextEdit11,
-            this.repositoryItemMemoEdit1});
+            this.repositoryItemMemoEdit1,
+            this.repositoryItemCheckEdit1,
+            this.repositoryItemToggleSwitch1,
+            this.repositoryItemCheckedComboBoxEdit1,
+            this.repositoryItemCheckEdit2});
             this.ribbonControl.Size = new System.Drawing.Size(1366, 161);
             // 
             // skinRibbonGalleryBarItem
@@ -543,6 +559,19 @@ namespace OrderExport
             // 
             this.repositoryItemMemoEdit1.Name = "repositoryItemMemoEdit1";
             // 
+            // chk_ExportSelectOnly
+            // 
+            this.chk_ExportSelectOnly.Caption = "仅导出选中列";
+            this.chk_ExportSelectOnly.Edit = this.repositoryItemCheckEdit2;
+            this.chk_ExportSelectOnly.Id = 28;
+            this.chk_ExportSelectOnly.Name = "chk_ExportSelectOnly";
+            this.chk_ExportSelectOnly.EditValueChanged += new System.EventHandler(this.chk_ExportSelectOnly_changed);
+            // 
+            // repositoryItemCheckEdit2
+            // 
+            this.repositoryItemCheckEdit2.AutoHeight = false;
+            this.repositoryItemCheckEdit2.Name = "repositoryItemCheckEdit2";
+            // 
             // ribbonPage
             // 
             this.ribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -570,6 +599,7 @@ namespace OrderExport
             // 
             // ribbonPageGroup2
             // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.chk_ExportSelectOnly);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
@@ -643,6 +673,25 @@ namespace OrderExport
             // 
             this.repositoryItemTextEdit10.Name = "repositoryItemTextEdit10";
             // 
+            // repositoryItemCheckEdit1
+            // 
+            this.repositoryItemCheckEdit1.AutoHeight = false;
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            // 
+            // repositoryItemToggleSwitch1
+            // 
+            this.repositoryItemToggleSwitch1.AutoHeight = false;
+            this.repositoryItemToggleSwitch1.Name = "repositoryItemToggleSwitch1";
+            this.repositoryItemToggleSwitch1.OffText = "Off";
+            this.repositoryItemToggleSwitch1.OnText = "On";
+            // 
+            // repositoryItemCheckedComboBoxEdit1
+            // 
+            this.repositoryItemCheckedComboBoxEdit1.AutoHeight = false;
+            this.repositoryItemCheckedComboBoxEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemCheckedComboBoxEdit1.Name = "repositoryItemCheckedComboBoxEdit1";
+            // 
             // barEditItem4
             // 
             this.barEditItem4.Caption = "barEditItem3";
@@ -674,6 +723,7 @@ namespace OrderExport
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).EndInit();
@@ -685,6 +735,9 @@ namespace OrderExport
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemToggleSwitch1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckedComboBoxEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -752,5 +805,10 @@ namespace OrderExport
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarEditItem barEditItem2;
         private RepositoryItemMemoEdit repositoryItemMemoEdit1;
+        private RepositoryItemCheckEdit repositoryItemCheckEdit1;
+        private DevExpress.XtraBars.BarEditItem chk_ExportSelectOnly;
+        private RepositoryItemCheckEdit repositoryItemCheckEdit2;
+        private RepositoryItemToggleSwitch repositoryItemToggleSwitch1;
+        private RepositoryItemCheckedComboBoxEdit repositoryItemCheckedComboBoxEdit1;
     }
 }
