@@ -119,6 +119,7 @@
   <ItemGroup>
     <Compile Include="DataDto.cs" />
     <Compile Include="DataGridViewCheckboxCellFilter.cs" />
+    <Compile Include="exportExt.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -515,6 +516,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FodyWeavers.xml" />
     <Content Include="Health.contrast-black.ico" />
   </ItemGroup>
   <ItemGroup>

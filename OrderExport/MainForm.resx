@@ -120,9 +120,6 @@
   <metadata name="excelDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="excelDataSource1.ResultSchemaSerializable" xml:space="preserve">
-    <value>PFZpZXc+PEZpZWxkIE5hbWU9Iuadpea6kCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLorqLljZXlj7ciIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0i6K6i5Y2V5bqP5Y+3IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IuWTgeeJjOWQjSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLllYblk4HmnaHnoIEiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0i5ZWG5ZOB5qy+5Y+3IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IuWTgeexuyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLllYblk4HlkI3np7AiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0i6aKc6ImyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IuWwuueggSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSLmlbDph48iIFR5cGU9IkRvdWJsZSIgLz48RmllbGQgTmFtZT0i5pS26LSn5Lq6IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IuiBlOezu+eUteivnSIgVHlwZT0iRG91YmxlIiAvPjxGaWVsZCBOYW1lPSLmlLbotKflnLDlnYAiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0i5b+r6YCS5YWs5Y+4IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Iui/kOWNleWPtyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTS1XnvJbnoIEiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0i5p2h5b2i56CBIiBUeXBlPSJEb3VibGUiIC8+PC9WaWV3Pg==</value>
-  </data>
   <assembly alias="DevExpress.Data.v19.2" name="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="btn_loadExcel.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v19.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

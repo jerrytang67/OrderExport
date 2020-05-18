@@ -12,6 +12,8 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using OfficeOpenXml;
 
 namespace OrderExport
@@ -334,13 +336,20 @@ namespace OrderExport
         {
             if (gridView.RowCount > 0)
             {
-                string path = "output.xlsx";
+                gridView.OptionsView.RowAutoHeight = true;
 
-                gridView.OptionsPrint.PrintSelectedRowsOnly = Convert.ToBoolean(chk_ExportSelectOnly.EditValue);
+                exportExt.ExportToExcel(DateTime.Now.ToString("导出订单-yyyyMMddhhmmss"), gridControl);
+                gridView.OptionsView.RowAutoHeight = false;
 
-                gridControl.ExportToXlsx(path);
-                // Open the created XLSX file with the default application.
-                Process.Start(path);
+                // string path = "output.xlsx";
+                //
+                // gridView.OptionsPrint.PrintSelectedRowsOnly = Convert.ToBoolean(chk_ExportSelectOnly.EditValue);
+                //
+                // var list = gridControl.DataSource as List<DataDto>;
+                //
+                // gridControl.ExportToXlsx(path);
+                // // Open the created XLSX file with the default application.
+                // Process.Start(path);
             }
 
         }
@@ -415,6 +424,35 @@ namespace OrderExport
             config.Save();
             ConfigurationManager.RefreshSection("appSettings");
 
+        }
+
+        private void gridView_CustomDrawGroupRow(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            var view = sender as GridView;
+            var info = e.Info as GridGroupRowInfo;
+            if (info.Column.FieldName == "商品款号")
+            {
+                // var sum = view.GetGroupSummaryValues(e.RowHandle);
+                // int quantity = 0;
+                // foreach (var q in sum.Values)
+                // {
+                //     quantity = (int)q;
+                // }
+                // string colorName = getColorName(quantity);
+                // info.GroupText = info.Column.Caption + ": <color=" + colorName + ">" + info.GroupValueText + "</color> ";
+
+                //var image = view.GetRow(e.RowHandle) as DataDto;
+                //info.GroupText += $"{image.图片}<image={image.图片};size=20,20;align=top>";
+                //Project resource images can only be loaded from the Entry Assembly﻿ (the startup executable). Thus, if you define images in the resources of your additional class library, these images cannot be loaded using the image tag, even from this library code.
+                //所以本机图片不能显示
+            }
+        }
+
+        string getColorName(int value)
+        {
+            if (value <= 1) return "MediumOrchid";
+            if (value > 1) return "OrangeRed";
+            return "Blue";
         }
     }
 }

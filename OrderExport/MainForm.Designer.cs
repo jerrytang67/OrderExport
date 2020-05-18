@@ -32,28 +32,9 @@ namespace OrderExport
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo1 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo2 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo3 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo4 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo5 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo6 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo7 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo8 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo9 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo10 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo11 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo12 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo13 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo14 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo15 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo16 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo17 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo18 = new DevExpress.DataAccess.Excel.FieldInfo();
-            DevExpress.DataAccess.Excel.FieldInfo fieldInfo19 = new DevExpress.DataAccess.Excel.FieldInfo();
             DevExpress.DataAccess.Excel.ExcelWorksheetSettings excelWorksheetSettings1 = new DevExpress.DataAccess.Excel.ExcelWorksheetSettings();
             DevExpress.DataAccess.Excel.ExcelSourceOptions excelSourceOptions1 = new DevExpress.DataAccess.Excel.ExcelSourceOptions(excelWorksheetSettings1);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.excelDataSource1 = new DevExpress.DataAccess.Excel.ExcelDataSource();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -158,66 +139,6 @@ namespace OrderExport
             // excelDataSource1
             // 
             this.excelDataSource1.Name = "excelDataSource1";
-            this.excelDataSource1.ResultSchemaSerializable = resources.GetString("excelDataSource1.ResultSchemaSerializable");
-            fieldInfo1.Name = "来源";
-            fieldInfo1.Type = typeof(string);
-            fieldInfo2.Name = "订单号";
-            fieldInfo2.Type = typeof(string);
-            fieldInfo3.Name = "订单序号";
-            fieldInfo3.Type = typeof(string);
-            fieldInfo4.Name = "品牌名";
-            fieldInfo4.Type = typeof(string);
-            fieldInfo5.Name = "商品条码";
-            fieldInfo5.Type = typeof(string);
-            fieldInfo6.Name = "商品款号";
-            fieldInfo6.Type = typeof(string);
-            fieldInfo7.Name = "品类";
-            fieldInfo7.Type = typeof(string);
-            fieldInfo8.Name = "商品名称";
-            fieldInfo8.Type = typeof(string);
-            fieldInfo9.Name = "颜色";
-            fieldInfo9.Type = typeof(string);
-            fieldInfo10.Name = "尺码";
-            fieldInfo10.Type = typeof(string);
-            fieldInfo11.Name = "数量";
-            fieldInfo11.Type = typeof(double);
-            fieldInfo12.Name = "收货人";
-            fieldInfo12.Type = typeof(string);
-            fieldInfo13.Name = "联系电话";
-            fieldInfo13.Type = typeof(double);
-            fieldInfo14.Name = "收货地址";
-            fieldInfo14.Type = typeof(string);
-            fieldInfo15.Name = "快递公司";
-            fieldInfo15.Type = typeof(string);
-            fieldInfo16.Name = "运单号";
-            fieldInfo16.Type = typeof(string);
-            fieldInfo17.Name = "SKU编码";
-            fieldInfo17.Type = typeof(string);
-            fieldInfo18.Name = "条形码";
-            fieldInfo18.Type = typeof(double);
-            fieldInfo19.Name = "图片";
-            fieldInfo19.Type = typeof(string);
-            this.excelDataSource1.Schema.AddRange(new DevExpress.DataAccess.Excel.FieldInfo[] {
-            fieldInfo1,
-            fieldInfo2,
-            fieldInfo3,
-            fieldInfo4,
-            fieldInfo5,
-            fieldInfo6,
-            fieldInfo7,
-            fieldInfo8,
-            fieldInfo9,
-            fieldInfo10,
-            fieldInfo11,
-            fieldInfo12,
-            fieldInfo13,
-            fieldInfo14,
-            fieldInfo15,
-            fieldInfo16,
-            fieldInfo17,
-            fieldInfo18,
-            fieldInfo19
-            });
             excelWorksheetSettings1.CellRange = null;
             excelWorksheetSettings1.WorksheetName = "Sheet1";
             excelSourceOptions1.ImportSettings = excelWorksheetSettings1;
@@ -252,7 +173,8 @@ namespace OrderExport
             this.gridView.Name = "gridView";
             this.gridView.OptionsPrint.PrintFilterInfo = true;
             this.gridView.OptionsSelection.MultiSelect = true;
-            this.gridView.RowHeight = 80;
+            this.gridView.RowHeight = 70;
+            this.gridView.CustomDrawGroupRow += new DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventHandler(this.gridView_CustomDrawGroupRow);
             this.gridView.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView_CustomUnboundColumnData);
             // 
             // col来源
@@ -262,7 +184,7 @@ namespace OrderExport
             this.col来源.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.col来源.Visible = true;
             this.col来源.VisibleIndex = 10;
-            this.col来源.Width = 71;
+            this.col来源.Width = 72;
             // 
             // col订单号
             // 
@@ -270,7 +192,7 @@ namespace OrderExport
             this.col订单号.Name = "col订单号";
             this.col订单号.Visible = true;
             this.col订单号.VisibleIndex = 11;
-            this.col订单号.Width = 71;
+            this.col订单号.Width = 72;
             // 
             // col订单序号
             // 
@@ -278,30 +200,30 @@ namespace OrderExport
             this.col订单序号.Name = "col订单序号";
             this.col订单序号.Visible = true;
             this.col订单序号.VisibleIndex = 12;
-            this.col订单序号.Width = 71;
+            this.col订单序号.Width = 72;
             // 
             // col品牌名
             // 
             this.col品牌名.FieldName = "品牌名";
             this.col品牌名.Name = "col品牌名";
             this.col品牌名.Visible = true;
-            this.col品牌名.VisibleIndex = 3;
-            this.col品牌名.Width = 71;
+            this.col品牌名.VisibleIndex = 4;
+            this.col品牌名.Width = 72;
             // 
             // col商品条码
             // 
             this.col商品条码.FieldName = "商品条码";
             this.col商品条码.Name = "col商品条码";
             this.col商品条码.Visible = true;
-            this.col商品条码.VisibleIndex = 4;
-            this.col商品条码.Width = 71;
+            this.col商品条码.VisibleIndex = 5;
+            this.col商品条码.Width = 72;
             // 
             // col商品款号
             // 
             this.col商品款号.FieldName = "商品款号";
             this.col商品款号.Name = "col商品款号";
             this.col商品款号.Visible = true;
-            this.col商品款号.VisibleIndex = 5;
+            this.col商品款号.VisibleIndex = 2;
             this.col商品款号.Width = 71;
             // 
             // col品类
@@ -310,7 +232,7 @@ namespace OrderExport
             this.col品类.Name = "col品类";
             this.col品类.Visible = true;
             this.col品类.VisibleIndex = 6;
-            this.col品类.Width = 71;
+            this.col品类.Width = 72;
             // 
             // col商品名称
             // 
@@ -318,7 +240,7 @@ namespace OrderExport
             this.col商品名称.Name = "col商品名称";
             this.col商品名称.Visible = true;
             this.col商品名称.VisibleIndex = 13;
-            this.col商品名称.Width = 69;
+            this.col商品名称.Width = 70;
             // 
             // col颜色
             // 
@@ -326,7 +248,7 @@ namespace OrderExport
             this.col颜色.Name = "col颜色";
             this.col颜色.Visible = true;
             this.col颜色.VisibleIndex = 7;
-            this.col颜色.Width = 51;
+            this.col颜色.Width = 52;
             // 
             // col尺码
             // 
@@ -334,15 +256,15 @@ namespace OrderExport
             this.col尺码.Name = "col尺码";
             this.col尺码.Visible = true;
             this.col尺码.VisibleIndex = 8;
-            this.col尺码.Width = 51;
+            this.col尺码.Width = 52;
             // 
             // col数量
             // 
             this.col数量.FieldName = "数量";
             this.col数量.Name = "col数量";
             this.col数量.Visible = true;
-            this.col数量.VisibleIndex = 2;
-            this.col数量.Width = 51;
+            this.col数量.VisibleIndex = 3;
+            this.col数量.Width = 52;
             // 
             // col收货人
             // 
@@ -350,7 +272,7 @@ namespace OrderExport
             this.col收货人.Name = "col收货人";
             this.col收货人.Visible = true;
             this.col收货人.VisibleIndex = 14;
-            this.col收货人.Width = 89;
+            this.col收货人.Width = 92;
             // 
             // col联系电话
             // 
@@ -358,7 +280,7 @@ namespace OrderExport
             this.col联系电话.Name = "col联系电话";
             this.col联系电话.Visible = true;
             this.col联系电话.VisibleIndex = 15;
-            this.col联系电话.Width = 89;
+            this.col联系电话.Width = 92;
             // 
             // col收货地址
             // 
@@ -366,7 +288,7 @@ namespace OrderExport
             this.col收货地址.Name = "col收货地址";
             this.col收货地址.Visible = true;
             this.col收货地址.VisibleIndex = 16;
-            this.col收货地址.Width = 89;
+            this.col收货地址.Width = 92;
             // 
             // col快递公司
             // 
@@ -374,7 +296,7 @@ namespace OrderExport
             this.col快递公司.Name = "col快递公司";
             this.col快递公司.Visible = true;
             this.col快递公司.VisibleIndex = 17;
-            this.col快递公司.Width = 89;
+            this.col快递公司.Width = 92;
             // 
             // col运单号
             // 
@@ -382,7 +304,7 @@ namespace OrderExport
             this.col运单号.Name = "col运单号";
             this.col运单号.Visible = true;
             this.col运单号.VisibleIndex = 9;
-            this.col运单号.Width = 57;
+            this.col运单号.Width = 58;
             // 
             // colSKU编码
             // 
@@ -398,24 +320,27 @@ namespace OrderExport
             this.col条形码.Name = "col条形码";
             this.col条形码.Visible = true;
             this.col条形码.VisibleIndex = 18;
-            this.col条形码.Width = 103;
+            this.col条形码.Width = 124;
             // 
             // colPic
             // 
             this.colPic.Caption = "图片";
             this.colPic.ColumnEdit = this.repositoryItemPictureEdit1;
             this.colPic.FieldName = "photo";
+            this.colPic.GroupFormat.FormatString = "{0}";
             this.colPic.GroupFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.colPic.Name = "colPic";
+            this.colPic.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             this.colPic.UnboundType = DevExpress.Data.UnboundColumnType.String;
             this.colPic.Visible = true;
             this.colPic.VisibleIndex = 0;
+            this.colPic.Width = 180;
             // 
             // repositoryItemPictureEdit1
             // 
             this.repositoryItemPictureEdit1.ExportMode = DevExpress.XtraEditors.Repository.ExportMode.Value;
             this.repositoryItemPictureEdit1.Name = "repositoryItemPictureEdit1";
-            this.repositoryItemPictureEdit1.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.repositoryItemPictureEdit1.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             // 
             // ribbonControl
             // 
@@ -556,7 +481,6 @@ namespace OrderExport
             // 
             this.barEditItem2.Caption = "快递号:";
             this.barEditItem2.Edit = this.repositoryItemMemoEdit1;
-            this.barEditItem2.EditHeight = 80;
             this.barEditItem2.EditWidth = 250;
             this.barEditItem2.Id = 21;
             this.barEditItem2.Name = "barEditItem2";
